@@ -3,6 +3,12 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+# Use sidekiq for background processing
+gem 'sidekiq', '~> 2.15.0'
+
+# Use sinatra for monitoring sidekiq 
+gem 'sinatra', '>= 1.3.0', :require => nil
+
 # Use redis as both a data-store and memory-cache
 gem 'redis-rails', '~> 4.0.0'
 
@@ -51,4 +57,8 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.14.0'
+end
+
+group :test do
+  gem 'rspec-sidekiq', '~> 0.5.0'
 end
