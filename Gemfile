@@ -6,6 +6,9 @@ gem 'rails', '4.0.0'
 # Use sidekiq for background processing
 gem 'sidekiq', '~> 2.15.0'
 
+# Use sidetiq for scheduling sidekiq workers
+gem 'sidetiq', '~> 0.4.0'
+
 # Use sinatra for monitoring sidekiq 
 gem 'sinatra', '>= 1.3.0', :require => nil
 
