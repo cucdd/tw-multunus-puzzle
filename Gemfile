@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+# Use twitter to access twitter api
+gem 'twitter', '5.0.0.rc.1'
+
 # Use sidekiq for background processing
 gem 'sidekiq', '~> 2.15.0'
 
