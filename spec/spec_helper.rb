@@ -3,6 +3,8 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
+require 'capybara/rails'
+require 'capybara/rspec'
 require 'sidekiq/testing'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
@@ -40,6 +42,9 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  # Make the Capybara DSL available in all integration tests
+  config.include Capybara::DSL
 
   config.before(:each) do
     # Clears out the jobs for tests using the fake testing

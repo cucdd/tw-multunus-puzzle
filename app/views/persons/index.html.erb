@@ -1,0 +1,9 @@
+<div id="container">
+  <%= content_tag :ul, class: "gallery group" do %>
+    <% @persons.each do |person| %>
+    <li>
+  <%= link_to( image_tag(person.image, size: "114x114"), "persons/#{person.name}", data: {name: person.name} ) %>
+  </li>
+<% end %>
+<% end %>
+</div>

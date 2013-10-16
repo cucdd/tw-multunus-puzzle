@@ -1,0 +1,157 @@
+// Place all the styles related to the persons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: url(image_path('001.jpg')) repeat;
+}
+
+header {
+  padding: 10px 0px 5px 25px;
+  background: rgba(52,115,138,0.2);
+}
+
+header input[type=button] {
+  color: #08233e;
+  font: 2.4em Futura, ‘Century Gothic’, AppleGothic, sans-serif;
+  font-size: 70%;
+  padding: 14px;
+  background-color: rgba(255,204,0,1);
+  border: 1px solid #ffcc00;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border-bottom: 1px solid #9f9f9f;
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+  cursor: pointer;
+  position: relative;
+  top: 20px;
+}
+
+header input[type=button]:hover {
+  background-color: rgba(255,204,0,0.8);
+}
+
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+
+#container {
+  width: 50%;
+  margin: auto;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  #container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  #container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #container {
+    width: 60%;
+  }
+}
+
+.gallery {
+  padding-left: 3em;
+  margin-top: 10px;
+  border-left: 1px solid #555;
+  border-right: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ul.gallery {
+  list-style: none;
+}
+
+ul.gallery img {
+  display: block;
+}
+
+ul.gallery a:after {
+  content: attr(data-name);
+}
+
+ul.gallery li a {
+  float: left;
+  margin: 20px;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid;
+  text-align: center;
+  text-decoration: none;
+  color: #475954; 
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+
+/* By default, we tilt all our images -4 degrees */
+ul.gallery a {
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+}
+
+/* Rotate all even images 2 degrees */
+ul.gallery li:nth-child(even) a {
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+}
+
+/* Don't rotate every second image, but offset its position */
+ul.gallery li:nth-child(2n) a {
+  -webkit-transform: none;
+  -moz-transform: none;
+  position: relative;
+  top: -5px;
+}
+
+/* Rotate every fifth image by 5 degrees and offset it */
+ul.gallery li:nth-child(5n) a {
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  position: relative;
+  right: 5px;
+}
+
+/* Keep default rotate for every eighth, but offset it */
+ul.gallery li:nth-child(8n) a {
+  position: relative;
+  top: 8px;
+  right: 5px;
+}
+
+/* Keep default rotate for every eleventh, but offset it */
+ul.gallery li:nth-child(11n) a {
+  position: relative;
+  top: 3px;
+  left: -5px;
+}
