@@ -155,3 +155,174 @@ ul.gallery li:nth-child(11n) a {
   top: 3px;
   left: -5px;
 }
+
+// absolute horizontal and vertical centering
+.tw-content {
+  position: relative;
+  height: 30em;
+}
+
+.abs-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+// tooltips
+.tooltip {
+  display: inline;
+  position: relative;
+}
+
+.tooltip:hover:after {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  bottom: 100px;
+  content: attr(data-score);
+  left: 20%;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 98;
+  width: 100px;
+}
+
+.tooltip:hover:before {
+  border: solid;
+  border-color: #000 transparent;
+  border-width: 8px 8px 0 8px;
+  bottom: 96px;
+  content: '';
+  left: 50%;
+  position: absolute;
+  z-index:99;
+}
+
+// circular images
+.circular-img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+ul {
+  max-width: 100%;
+}
+
+// circular image gallery
+// taken fro - http://codepen.io/HugoGiraudel/pen/Bigqr - with slight modification
+// modification - initial rotation angle to 270
+.circle-container {
+  position: relative;
+  width: 30em;
+  height: 30em;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 5em auto 0;
+}
+
+.circle-container > * {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6em;
+  height: 6em;
+  margin: -3em;
+}
+
+.circle-container > *:nth-of-type(1) {
+  -webkit-transform: rotate(270deg) translate(15em) rotate(-270deg);
+  -moz-transform: rotate(270deg) translate(15em) rotate(-270deg);
+  -ms-transform: rotate(270deg) translate(15em) rotate(-270deg);
+  -o-transform: rotate(270deg) translate(15em) rotate(-270deg);
+  transform: rotate(270deg) translate(15em) rotate(-270deg);
+}
+
+.circle-container > *:nth-of-type(2) {
+  -webkit-transform: rotate(306deg) translate(15em) rotate(-306deg);
+  -moz-transform: rotate(306deg) translate(15em) rotate(-306deg);
+  -ms-transform: rotate(306deg) translate(15em) rotate(-306deg);
+  -o-transform: rotate(306deg) translate(15em) rotate(-306deg);
+  transform: rotate(306deg) translate(15em) rotate(-306deg);
+}
+
+.circle-container > *:nth-of-type(3) {
+  -webkit-transform: rotate(342deg) translate(15em) rotate(-342deg);
+  -moz-transform: rotate(342deg) translate(15em) rotate(-342deg);
+  -ms-transform: rotate(342deg) translate(15em) rotate(-342deg);
+  -o-transform: rotate(342deg) translate(15em) rotate(-342deg);
+  transform: rotate(342deg) translate(15em) rotate(-342deg);
+}
+
+.circle-container > *:nth-of-type(4) {
+  -webkit-transform: rotate(378deg) translate(15em) rotate(-378deg);
+  -moz-transform: rotate(378deg) translate(15em) rotate(-378deg);
+  -ms-transform: rotate(378deg) translate(15em) rotate(-378deg);
+  -o-transform: rotate(378deg) translate(15em) rotate(-378deg);
+  transform: rotate(378deg) translate(15em) rotate(-378deg);
+}
+
+.circle-container > *:nth-of-type(5) {
+  -webkit-transform: rotate(414deg) translate(15em) rotate(-414deg);
+  -moz-transform: rotate(414deg) translate(15em) rotate(-414deg);
+  -ms-transform: rotate(414deg) translate(15em) rotate(-414deg);
+  -o-transform: rotate(414deg) translate(15em) rotate(-414deg);
+  transform: rotate(414deg) translate(15em) rotate(-414deg);
+}
+
+.circle-container > *:nth-of-type(6) {
+  -webkit-transform: rotate(450deg) translate(15em) rotate(-450deg);
+  -moz-transform: rotate(450deg) translate(15em) rotate(-450deg);
+  -ms-transform: rotate(450deg) translate(15em) rotate(-450deg);
+  -o-transform: rotate(450deg) translate(15em) rotate(-450deg);
+  transform: rotate(450deg) translate(15em) rotate(-450deg);
+}
+
+.circle-container > *:nth-of-type(7) {
+  -webkit-transform: rotate(486deg) translate(15em) rotate(-486deg);
+  -moz-transform: rotate(486deg) translate(15em) rotate(-486deg);
+  -ms-transform: rotate(486deg) translate(15em) rotate(-486deg);
+  -o-transform: rotate(486deg) translate(15em) rotate(-486deg);
+  transform: rotate(486deg) translate(15em) rotate(-486deg);
+}
+
+.circle-container > *:nth-of-type(8) {
+  -webkit-transform: rotate(522deg) translate(15em) rotate(-522deg);
+  -moz-transform: rotate(522deg) translate(15em) rotate(-522deg);
+  -ms-transform: rotate(522deg) translate(15em) rotate(-522deg);
+  -o-transform: rotate(522deg) translate(15em) rotate(-522deg);
+  transform: rotate(522deg) translate(15em) rotate(-522deg);
+}
+
+.circle-container > *:nth-of-type(9) {
+  -webkit-transform: rotate(558deg) translate(15em) rotate(-558deg);
+  -moz-transform: rotate(558deg) translate(15em) rotate(-558deg);
+  -ms-transform: rotate(558deg) translate(15em) rotate(-558deg);
+  -o-transform: rotate(558deg) translate(15em) rotate(-558deg);
+  transform: rotate(558deg) translate(15em) rotate(-558deg);
+}
+
+.circle-container > *:nth-of-type(10) {
+  -webkit-transform: rotate(594deg) translate(15em) rotate(-594deg);
+  -moz-transform: rotate(594deg) translate(15em) rotate(-594deg);
+  -ms-transform: rotate(594deg) translate(15em) rotate(-594deg);
+  -o-transform: rotate(594deg) translate(15em) rotate(-594deg);
+  transform: rotate(594deg) translate(15em) rotate(-594deg);
+}
+
+.circle-container img {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
