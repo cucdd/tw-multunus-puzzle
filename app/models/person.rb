@@ -9,7 +9,8 @@ class Person < Ohm::Model
   # doesn't act on it, monkey patching
   # TODO: patc upstream
   def self.redis=(redis)
-    @redis = Redic.new("redis://localhost:6379/")
+    @redis = Redic.new("redis://#{ENV['OPENSHIFT_REDIS_HOST']}:#{ENV['OPENSHIFT_REDIS_PORT']}/")
+    @redis.call('AUTH', ENV['REDIS_PASSWORD'])
   end
 
   # TODO: doesn't work , bug in Ohm ?
