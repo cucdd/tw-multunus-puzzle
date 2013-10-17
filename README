@@ -6,11 +6,12 @@ The results are cached in redis
 
 Running Tests
 Testing is done on live data as their are only 9 person and redis is very fast
+redis-server
 ./bin/rake twitter:users:load
 ./bin/rspec spec/
 
 Starting the application in development mode
-./bin/rake twitter:users:load
 redis-server
+./bin/rake twitter:users:load
 ./bin/sidekiq -c 1 -t 10
 ./bin/rails s
