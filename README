@@ -1,0 +1,16 @@
+Application URL - http://tww-wfnnjxms.rhcloud.com/
+Background Process - http://tww-wfnnjxms.rhcloud.com/sidekiq
+
+Twitter API calls are made in background (using sidekiq) and scheduled after every 4 hours (using sidetiq)
+The results are cached in redis
+
+Running Tests
+Testing is done on live data as their are only 9 person and redis is very fast
+./bin/rake twitter:users:load
+./bin/rspec spec/
+
+Starting the application in development mode
+./bin/rake twitter:users:load
+redis-server
+./bin/sidekiq -c 1 -t 10
+./bin/rails s
