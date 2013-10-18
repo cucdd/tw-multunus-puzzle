@@ -7,9 +7,12 @@ class Person < Ohm::Model
 
   # bug in redic, accepts password and db in URI but
   # doesn't act on it, monkey patching
-  # TODO: patc upstream
+  # TODO: patch upstream
   def self.redis=(redis)
-    @redis = Redic.new("redis://#{ENV['OPENSHIFT_REDIS_HOST']}:#{ENV['OPENSHIFT_REDIS_PORT']}/")
+    host = ENV['OPENSHIFT_REDIS_HOST']
+    port = ENV['OPENSHIFT_REDIS_PORT']
+    # need to confirm this later - parse bug in URI.parse -> https://www.ruby-forum.com/topic/171362
+    @redis = Redic.new("redis://#{host}:#{port}/")
     @redis.call('AUTH', ENV['REDIS_PASSWORD'])
   end
 
