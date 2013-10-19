@@ -4,6 +4,10 @@ Background Process - http://tww-wfnnjxms.rhcloud.com/sidekiq
 Twitter API calls are made in background (using sidekiq) and scheduled after every 4 hours (using sidetiq)
 The results are cached in redis
 
+Screenshots
+http://imgur.com/pE0jRM1
+http://imgur.com/1GQ64nY
+
 Running Tests
 Testing is done on live data as their are only 9 person and redis is very fast
 redis-server
