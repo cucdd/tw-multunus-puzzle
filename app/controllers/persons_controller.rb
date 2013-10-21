@@ -1,5 +1,5 @@
 class PersonsController < ApplicationController
-  before_filter :redis_redic_bug
+  before_action :redis_redic_bug
 
   def redis_redic_bug
     Person.redis='BUG'
