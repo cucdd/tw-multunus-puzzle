@@ -13,7 +13,7 @@ namespace :twitter do
       gvanrossum: 'http://pbs.twimg.com/profile_images/424495004/GuidoAvatar.jpg',
       billgates: 'http://pbs.twimg.com/profile_images/1884069342/BGtwitter.JPG',
       spolsky: 'http://pbs.twimg.com/profile_images/378800000091193257/fcb03c8d0a40048f2537df967239686f.jpeg',
-      firefox: 'http:/pbs.twimg.com/profile_images/378800000324784929/1a4ee3fde80808a96ed268a7fb94682d.png'
+      firefox: 'http://pbs.twimg.com/profile_images/378800000324784929/1a4ee3fde80808a96ed268a7fb94682d.png'
     }
 
     persons.each do |name, image|
